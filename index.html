@@ -261,18 +261,118 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                font-size: 1.05rem;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            header {
+                padding: 1.2rem 0.3rem 1rem 0.3rem;
+                font-size: 1.1rem;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+                gap: 0.3rem;
+            }
+
+            .welcome {
+                font-size: 1rem;
+                padding: 0.4rem 0.7rem;
+                margin-top: 0.7rem;
+            }
+
             .menu-container {
-                padding: 0.7rem;
+                padding: 0.5rem 0.2rem 0.7rem 0.2rem;
+                margin: 1.2rem 0.2rem 1.2rem 0.2rem;
+                border-radius: 14px;
+            }
+
+            .category {
+                margin-bottom: 1.5rem;
+            }
+
+            .category h2 {
+                font-size: 1.15rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .category h2 svg {
+                width: 16px !important;
+                height: 16px !important;
             }
 
             .items {
                 flex-direction: column;
-                gap: 0.8rem;
+                gap: 0.5rem;
             }
 
             .item {
                 min-width: unset;
                 width: 100%;
+                padding: 0.8rem 0.7rem 0.8rem 0.7rem;
+                font-size: 0.98rem;
+                border-radius: 10px;
+                margin-bottom: 0.2rem;
+            }
+
+            .item .price {
+                top: 0.7rem;
+                right: 0.7rem;
+                font-size: 0.98rem;
+                padding: 0.18rem 0.7rem;
+                border-radius: 7px;
+            }
+
+            .item-name {
+                font-size: 1.01rem;
+            }
+
+            .item-desc {
+                font-size: 0.93rem;
+            }
+
+            .starfish {
+                width: 32px !important;
+                height: 32px !important;
+                opacity: 0.10;
+            }
+
+            .starfish.left1,
+            .starfish.right1 {
+                top: 6vh;
+            }
+
+            .starfish.left2,
+            .starfish.right2 {
+                top: 80vh;
+            }
+
+            .socials {
+                gap: 0.7rem;
+                margin-top: 1rem;
+            }
+
+            .socials a svg {
+                width: 22px !important;
+                height: 22px !important;
+            }
+
+            footer div {
+                flex-direction: column;
+                gap: 0.3rem;
+                margin: 1.2rem 0 0.7rem 0 !important;
+            }
+
+            footer span {
+                font-size: 0.98rem !important;
+                padding: 0.3rem 0.8rem !important;
+            }
+
+            footer svg {
+                width: 20px !important;
+                height: 20px !important;
             }
         }
     </style>
