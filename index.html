@@ -297,15 +297,29 @@
                 flex: unset;
                 height: auto;
                 margin-bottom: 0;
-                padding: 1.2rem 2.5rem 1.2rem 1.1rem;
+                padding: 1.2rem 1.1rem 1.2rem 1.1rem;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
             }
 
             .item .price {
-                right: 1.1rem;
+                position: static;
+                align-self: flex-start;
+                margin-left: 1rem;
+                min-width: 60px;
+                max-width: 80px;
+                text-align: center;
             }
 
             .category {
                 margin-bottom: 2.2rem;
+            }
+
+            .item-name,
+            .item-desc {
+                display: block;
             }
         }
     </style>
