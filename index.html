@@ -293,29 +293,29 @@
 
             .item {
                 min-width: 0;
-                width: 98%;
-                margin: 0 auto;
+                width: 100%;
+                margin: 0;
+                box-sizing: border-box;
                 flex: unset;
                 height: auto;
                 margin-bottom: 0;
-                padding: 1.2rem;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: space-between;
+                padding: 1.2rem 3.2rem 1.2rem 1.1rem;
+                display: block;
+                position: relative;
                 overflow: hidden;
             }
 
             .item .price {
-                position: static;
-                flex-shrink: 0;
-                min-width: 52px;
-                max-width: 64px;
+                position: absolute;
+                right: 1.1rem;
+                top: 1.2rem;
+                min-width: 44px;
+                max-width: 52px;
                 box-sizing: border-box;
                 text-align: center;
-                margin-left: 0.5rem;
-                align-self: flex-start;
-                font-size: 0.98rem;
+                font-size: 0.95rem;
+                align-self: unset;
+                margin-left: 0;
             }
 
             .category {
