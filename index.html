@@ -297,21 +297,23 @@
                 flex: unset;
                 height: auto;
                 margin-bottom: 0;
-                padding: 1.2rem 4.5rem 1.2rem 1.1rem;
-                display: block;
-                position: relative;
+                padding: 1.2rem 1.1rem 1.2rem 1.1rem;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                overflow: hidden;
             }
 
             .item .price {
-                position: absolute;
-                right: 1.1rem;
-                top: 1.2rem;
+                position: static;
+                flex-shrink: 0;
                 min-width: 60px;
-                max-width: 4rem;
+                max-width: 80px;
                 box-sizing: border-box;
                 text-align: center;
-                margin-left: 0;
-                align-self: unset;
+                margin-left: 1rem;
+                align-self: flex-start;
             }
 
             .category {
