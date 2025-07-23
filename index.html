@@ -10,24 +10,23 @@
         rel="stylesheet">
     <style>
         :root {
-            --turkuaz: #179ca8;
-            --turuncu: #ff7f1f;
+            --krem: #f8f5ef;
             --fuşya: #e91e63;
-            --beyaz: #f9f9f9;
-            --siyah: #222;
+            --turuncu: #ff7f1f;
+            --mavi: #2b7a8b;
+            --beyaz: #fff;
+            --siyah: #232323;
             --kart-border: #e91e63;
-            --kart-border2: #ff7f1f;
         }
 
         body {
             margin: 0;
             padding: 0;
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #179ca8 0%, #ff7f1f 60%, #e91e63 100%);
+            background: var(--krem);
             min-height: 100vh;
             color: var(--siyah);
             overflow-x: hidden;
-            position: relative;
         }
 
         body::before {
@@ -108,38 +107,50 @@
 
         /* Header ve başlıklar */
         header {
-            background: linear-gradient(90deg, var(--turkuaz) 60%, var(--turuncu) 100%);
-            color: var(--beyaz);
+            background: none;
+            color: var(--fuşya);
             padding: 2.2rem 1rem 1.5rem 1rem;
             text-align: center;
             letter-spacing: 2px;
-            border-bottom: 6px solid var(--fuşya);
-            box-shadow: 0 4px 24px 0 rgba(23, 156, 168, 0.10);
+            border-bottom: 4px solid var(--mavi);
+            box-shadow: none;
             position: relative;
             z-index: 2;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.8rem;
-            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            letter-spacing: 3px;
-            color: #179ca8;
-            background: linear-gradient(90deg, #179ca8 60%, #ff7f1f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            opacity: 0.96;
-            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.13), 0 1px 0 #fff;
+            letter-spacing: 2px;
+            color: var(--fuşya);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+        }
+
+        header h1 .logo-img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+            image-rendering: auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px 0 rgba(43, 122, 139, 0.10);
+            background: var(--beyaz);
+        }
+
+        header h1 .logo-star {
+            display: none;
         }
 
         .welcome {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 500;
             margin: 1.1rem auto 0.7rem auto;
-            color: var(--beyaz);
-            background: rgba(233, 30, 99, 0.13);
+            color: var(--mavi);
+            background: rgba(233, 30, 99, 0.10);
             display: inline-block;
             padding: 0.5rem 1.2rem;
             border-radius: 18px;
@@ -151,22 +162,22 @@
             max-width: 900px;
             margin: 2.5rem auto 2rem auto;
             padding: 2rem 1.5rem 1.5rem 1.5rem;
-            background: rgba(255, 255, 255, 0.80);
+            background: var(--beyaz);
             border-radius: 22px;
-            box-shadow: 0 8px 32px 0 rgba(23, 156, 168, 0.13);
-            border: 2.5px solid var(--kart-border);
+            box-shadow: 0 8px 32px 0 rgba(43, 122, 139, 0.10);
+            border: 2.5px solid var(--mavi);
             position: relative;
             z-index: 2;
         }
 
         .category {
-            margin-bottom: 2.8rem;
+            margin-bottom: 2.2rem;
         }
 
         .category h2 {
-            color: var(--fuşya);
-            font-family: 'Playfair Display', serif;
-            font-size: 1.7rem;
+            color: var(--turuncu);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
             letter-spacing: 1px;
@@ -191,7 +202,7 @@
         }
 
         .item {
-            background: linear-gradient(135deg, #fff 70%, #ffe3f0 100%);
+            background: linear-gradient(135deg, var(--beyaz) 70%, #ffe3f0 100%);
             color: var(--siyah);
             border-radius: 16px;
             padding: 1.2rem 1.5rem 1.2rem 1.5rem;
@@ -202,13 +213,13 @@
             flex-direction: column;
             align-items: flex-start;
             position: relative;
-            border: 2px solid var(--kart-border2);
+            border: 2px solid var(--mavi);
             margin-bottom: 0.5rem;
             transition: box-shadow 0.2s, transform 0.2s;
         }
 
         .item:hover {
-            box-shadow: 0 6px 24px 0 rgba(255, 127, 31, 0.18);
+            box-shadow: 0 6px 24px 0 rgba(43, 122, 139, 0.18);
             transform: translateY(-4px) scale(1.03);
         }
 
@@ -232,14 +243,14 @@
             font-weight: 600;
             margin-bottom: 0.3rem;
             font-family: 'Montserrat', sans-serif;
-            color: var(--turkuaz);
+            color: var(--fuşya);
         }
 
         .item-desc {
             font-size: 1.01rem;
             opacity: 0.85;
             font-family: 'Montserrat', sans-serif;
-            color: var(--siyah);
+            color: var(--mavi);
         }
 
         /* Sosyal medya ikonları */
@@ -291,8 +302,7 @@
             .menu-container {
                 padding: 0.7rem 1.2rem 1rem 1.2rem;
                 margin: 1.1rem 0 1.1rem 0;
-                border-radius: 12px;
-                box-shadow: 0 2px 10px 0 rgba(23, 156, 168, 0.10);
+                border-radius: 14px;
             }
 
             .category {
@@ -312,15 +322,12 @@
 
             .items {
                 flex-direction: column;
-                gap: 0.4rem;
-                padding: 0;
+                gap: 0.8rem;
             }
 
             .item {
                 min-width: unset;
-                width: calc(100% - 2.4rem);
-                max-width: 500px;
-                margin: 0.15rem auto 0.15rem auto;
+                width: 100%;
                 padding: 0.7rem 0.6rem 0.7rem 0.6rem;
                 font-size: 0.97rem;
                 border-radius: 8px;
@@ -408,17 +415,13 @@
             stroke="#179ca8" stroke-width="2" />
     </svg>
     <header>
-        <h1 style="display:flex; align-items:center; justify-content:center; gap:0.7rem;">
-            <svg width="38" height="38" viewBox="0 0 100 100" fill="none" style="opacity:0.7;" aria-hidden="true">
-                <path d="M50 10 L58 38 L90 38 L62 54 L70 82 L50 64 L30 82 L38 54 L10 38 L42 38 Z" fill="#ff7f1f"
-                    stroke="#179ca8" stroke-width="2" />
-            </svg>
-            Deniz Yıldızı Menü
-            <svg width="38" height="38" viewBox="0 0 100 100" fill="none" style="opacity:0.7;" aria-hidden="true">
-                <path d="M50 10 L58 38 L90 38 L62 54 L70 82 L50 64 L30 82 L38 54 L10 38 L42 38 Z" fill="#ff7f1f"
-                    stroke="#179ca8" stroke-width="2" />
-            </svg>
-        </h1>
+        <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.7rem;">
+            <img src="images/aaa.jpg" alt="Deniz Yıldızı Kitchen Logo"
+                style="width:160px; height:160px; object-fit:contain; image-rendering:auto; border-radius:32px; box-shadow:0 10px 32px 0 rgba(43,122,139,0.18), 0 0 0 14px #fff; background:#fff; margin-bottom:0.7rem;" />
+            <h1
+                style="margin:0; font-size:2.5rem; font-family:'Montserrat',sans-serif; font-weight:700; letter-spacing:2px; color:#e91e63;">
+                Menü</h1>
+        </div>
         <div class="welcome">Hoşgeldiniz! Evinizin lezzeti için yemeklerimizle hizmetinizdeyiz.</div>
     </header>
     <main class="menu-container">
